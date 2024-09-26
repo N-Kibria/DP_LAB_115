@@ -11,6 +11,7 @@ public class Trip implements rideType.IRideType,PaymentProcess.PaymentMethod {
     private String status;
     private double fare;
     private double distance;
+    private IRideType R;
 
 
     public void setDistance(double distance) {
@@ -29,7 +30,7 @@ public class Trip implements rideType.IRideType,PaymentProcess.PaymentMethod {
     @Override
     public double calculateFare(double distance) {
 
-        return distance*5;
+         return distance * 5;
     }
 
     public void completeTrip(Driver d,Rider r) {
