@@ -1,10 +1,13 @@
 public class Capuccino extends Beverages {
     public Capuccino() {
-        description = "Espresso";
+
+        description = "Capuccino";
+        cost=2.99;
     }
 
     @Override
-    public double cost() {
-        return 1.99;
+    public double totalcost(AddCondiment condiment) {
+        cost=cost+ condiment.additionalcost();
+        return cost;
     }
 }
