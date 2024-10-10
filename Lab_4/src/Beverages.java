@@ -1,13 +1,12 @@
-import java.util.HashMap;
-import java.util.Map;
 
 public abstract class Beverages {
-    protected String description = "Unknown Beverage";
+    protected String description ;
+    double cost;
 
-    Map<IAddCondiment,Integer> ingredients  = new HashMap<>();
 
 
-    public abstract double cost();
+
+    public abstract double totalcost(AddCondiment condiment);
 
 
 }
