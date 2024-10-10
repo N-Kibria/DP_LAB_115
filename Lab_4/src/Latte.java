@@ -2,11 +2,16 @@
 
 public class Latte extends Beverages {
     public Latte() {
+
         description = "Latte";
+        cost=3.99;
     }
 
+
+
     @Override
-    public double cost() {
-        return 2.49;  // Base price of Latte
+    public double totalcost(AddCondiment condiment) {
+        cost=cost+ condiment.additionalcost();
+        return cost;
     }
 }
